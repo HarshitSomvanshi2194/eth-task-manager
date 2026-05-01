@@ -55,4 +55,4 @@ app.get("/tasks", auth, async (req, res) => {
   res.json(userTasks);
 });
 
-app.listen(5000, () => console.log("Server running on 5000"));
+app.listen(process.env.PORT || 5000, () => console.log("Server running on " + (process.env.PORT || 5000)));
